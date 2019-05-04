@@ -1,0 +1,40 @@
+.favorites-item{
+    padding: 2px 20px;
+    background-color: inherit;
+    border-width: 0;
+}
+
+hr{
+    margin: 4px 0 0 0;
+}
+
+.song-data-container{
+    text-align: left;
+}
+
+.title{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.subtitle{
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 1199px) {
+	
+    .title{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+	
+	.title{
+        font-size: 16px;
+    }
+    .subtitle{
+        font-size: 16px;
+    }
+}
+

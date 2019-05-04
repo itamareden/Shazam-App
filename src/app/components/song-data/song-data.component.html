@@ -1,0 +1,26 @@
+<li  class="list-group-item clearfix" [ngStyle]="{'background':isHover === true ? 'dodgerblue' : 'white' }"  
+    (mouseover)="isHover = true" (mouseleave)="isHover = false">
+    <div class="song-data-container">
+        <div class="float-left song-id-container">
+            <div class="song-id">{{songID + 1}}</div>
+        </div>
+
+        <img class="float-left img-responsive song-img"  [src]="songData.imageSrc"> 
+        <div class="float-left title-subtitle-container">
+            <h5 class="title" [innerHTML]="songData.title | uppercase | highlightMatch:inputVal"></h5>
+            <div class="subtitle">{{songData.subtitle}}</div>
+        </div>
+        <div class="float-right icons-container" style="height:100%">
+            <div class="icon-container float-left">
+                <a [href]="songData.linkUrl" target="_blank">
+                    <img class="shazam-icon" [src]="'../../../assets/shazam.png'">
+                </a>
+            </div>
+            <div *ngIf="songData.isFavorite !== undefined" class="float-left icon-container">
+                <fa *ngIf="songData.isFavorite" name="heart" class="heart-icon" (click)="removeSongFromFavorites()"></fa>
+                <fa *ngIf="!songData.isFavorite" name="heart-o" class="heart-icon" (click)="addSongToFavorites()"></fa>
+            </div>
+        </div>
+    </div>
+</li>
+

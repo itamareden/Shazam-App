@@ -1,0 +1,18 @@
+<page-header #header></page-header>
+<div *ngIf="isShowMainContent" class="container" [style.marginBottom]="containerMrgnBtm + 'px'">
+    <div class="row">
+        <div class="col-lg-8 no-padding">
+            <div class="song-list-container" [style.minHeight]="minHeight">
+                <input *ngIf="isSongListReady" class="search-song-input-bar" type='text' [placeholder]="inputPlaceholder" [(ngModel)]='inputVal'>
+                <song-list [inputVal]="inputVal" (dataReady)="isSongListReady = true"></song-list>
+            </div>
+        </div>
+        <div class="col-lg-4" [style.minHeight]="minHeight">
+            <div class="favorites-container">
+                <h4 style="padding-top: 15px">My Favorites Songs</h4> 
+                <hr class="favorites-hr">
+                <favorite-songs-list></favorite-songs-list>
+            </div>
+        </div>
+    </div>
+</div>

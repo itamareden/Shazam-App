@@ -1,0 +1,20 @@
+<div [ngSwitch]="dataStatus">
+    <div *ngSwitchCase="'ready'">
+        <ul  *ngIf="!!favoriteSongsArr.length; else message" class="list-group">
+            <favorite-song-item *ngFor="let favoriteSong of favoriteSongsArr" 
+                    [songData]="favoriteSong"></favorite-song-item>
+        </ul>
+        <ng-template #message>
+            <h5 class="general-msg-header">Your favorites list is empty</h5>
+            <h6 class="general-msg">
+                Click on the <fa name="heart" class="heart-icon"></fa> icon next to each song to add it to your favorites list
+            </h6>
+        </ng-template>
+    </div>
+    <app-spinner *ngSwitchCase="'waiting'" [color]="'white'"></app-spinner>
+    <div *ngSwitchCase="'failed'" class="error-msg">
+        <h3>Oops...</h3>
+        <h5>An error has occured.</h5>
+        <h5>Please try again later.</h5>
+    </div>
+</div>

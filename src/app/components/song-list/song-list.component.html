@@ -1,0 +1,13 @@
+<div [ngSwitch]="dataStatus">
+    <ul *ngSwitchCase="'ready'" class="list-group">
+        <song-data *ngFor="let songData of (songDataArr | songFilter: inputVal); let i = index" 
+                   [songData]="songData" [songID]="i" [inputVal]="inputVal"></song-data>
+    </ul>
+    <app-spinner *ngSwitchCase="'waiting'" [color]="'white'"></app-spinner>
+    <div *ngSwitchCase="'failed'">
+        <div class="error-msg">
+            <h3>Oops...</h3>
+            <h5>An error has occured. Please try again later.</h5>
+        </div>
+    </div>
+</div>

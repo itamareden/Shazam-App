@@ -1,0 +1,100 @@
+li{
+    border-color: dodgerblue;
+}
+
+.song-data-container{
+    height: 100px;
+}
+
+.song-img{
+    max-height: 100px;
+}
+
+.song-id-container{
+    height: 100%; 
+    margin-right: 20px;
+}
+
+.song-id{
+    line-height: 100px;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.icon-container{
+    height: 100%;
+    margin-left: 10px;
+}
+
+.shazam-icon{
+    height: 50px; 
+    width: 50px; 
+    position: relative; 
+    top: 50%; 
+    transform: translateY(-50%)
+}
+
+.heart-icon{
+    color: #c61e3b; 
+    font-size: 28px;
+    line-height: 100px;
+    cursor: pointer;
+}
+
+.title-subtitle-container{
+    max-width: 380px;
+    margin-left: 50px;
+}
+
+
+@media only screen and (max-width: 1199px) {
+	
+	.title-subtitle-container{
+		max-width: 270px;
+        margin-left: 40px;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	
+	.title-subtitle-container{
+		max-width: 330px;
+        margin-left: 50px;
+	}
+    .song-id{
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+	
+	.song-data-container{
+        height: 60px;
+    }
+    .title-subtitle-container{
+		max-width: 240px;
+        margin-left: 20px;
+	}
+    .icon-container{
+        margin-left: 8px;
+    }
+    .song-img{
+        max-height: 60px;
+    }
+    .song-id-container{
+        margin-right: 10px;
+    }
+    .song-id{
+        line-height: 60px;
+        font-size: 18px;
+    }
+    .shazam-icon{
+        height: 40px; 
+        width: 40px; 
+    }
+    .heart-icon{
+        line-height: 60px;
+        font-size: 24px;
+    }
+    
+}
