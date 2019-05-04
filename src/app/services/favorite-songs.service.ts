@@ -10,7 +10,7 @@ import { SongData } from  '../classes/song-data';
 })
 export class FavoriteSongsService { 
     
-    private baseUrl = `http://localhost:2121/api`;
+    private baseUrl = `https://thawing-basin-21081.herokuapp.com/api`;
     favoriteSongsListChanged = new Subject();
     
     constructor(private  http: HttpClient) {}
